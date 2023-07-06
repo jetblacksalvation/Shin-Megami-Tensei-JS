@@ -1,0 +1,3 @@
+export default class GameStateHandler{
+    //to be defined...
+};
