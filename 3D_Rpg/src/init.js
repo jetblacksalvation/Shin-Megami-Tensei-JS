@@ -1,4 +1,6 @@
 import './style.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
 import * as THREE from 'three';
 
@@ -6,6 +8,7 @@ class Game_Globals{
   constructor(){
     console.log(window.innerWidth, 'width');
     console.log(window.innerHeight, 'hights');
+    this.root = ReactDOM.createRoot(document.getElementById('root'));
 
     this.camera = new THREE.PerspectiveCamera(60, window.innerWidth/window.innerHeight, 0.1,1000);
 

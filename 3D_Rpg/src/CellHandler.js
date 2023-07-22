@@ -1,30 +1,5 @@
 // import './style.css'
 import {BoxGeometry, MeshBasicMaterial,TextureLoader,Mesh} from 'three';
-// function LoadLevel(LevelGrid, PlayerPosition){
-//     //Level grid is an array. PlayerPosition is also and array, but only ever has two elements. 
-//     //first index is x, second is z 
-
-//     //load level ...
-//     if(LevelGrid.length == 0){
-//         LevelGrid.push.apply(LevelGrid, [ 
-//             [1,1,1,1,1,1,1],
-//             [1,0,0,0,0,0,1],
-//             [1,1,1,0,0,0,0,1],
-//             [1,1,1,1,2,1,0,1],
-//             [0,0,0,0,0,1,0,1],
-//             [0,0,0,0,0,1,0,1],
-//             [0,0,0,0,0,1,0,1],
-//             [0,0,0,0,0,1,1,1]
-//         ]
-            
-//         );
-//     }
-//     if (PlayerPosition.length == 0){
-//         PlayerPosition.push.apply(PlayerPosition,[1,1]);
-
-//     }
-// }
-
 
 class LoadThings{
     PlayerPosition = [1,1];

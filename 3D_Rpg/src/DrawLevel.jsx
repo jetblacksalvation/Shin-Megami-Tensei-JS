@@ -1,6 +1,12 @@
 import * as THREE from 'three';
 import Game_Globals_Instance from './init';
+
 import LoaderInstance from './CellHandler';
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import * as styles from'/src/style.css?inline';
+
 const LevelandStateDrawer = {
     "roam" : { "function":function(renderer, scene, camera) {
         //basicallly main...
@@ -38,25 +44,13 @@ const LevelandStateDrawer = {
             console.log("You have run into Pixie of the Fairy clan!");
             this.HasRunAgain = true;
         }
-        var health = 10;
-        var img = new Image(800,800);
-        img.onload = () =>{console.log("done loading")};
-
-        img.src = "/Images/astolfo.jpg"
-
-        img.style.zIndex = 50;
-
-        const newDiv = document.createElement("a");
-        newDiv.id = "Show_Image"
-        newDiv.appendChild(img);
-        setTimeout(()=>{},10000);
-
-
-        document.body.appendChild(newDiv);
-        img.style.right = 20;
+        // var health = 10;
+        Game_Globals_Instance.root.render(
+            <React.StrictMode>
+                <img src="/Images/astolfo.jpg" width={800} height={800 } style={{'user-select': 'none', 'right' : 20, 'zIndex':50, 'background-size':'cover'}}></img>
+            </React.StrictMode>,
+        )
         // document.body.insertAdjacentHTML('beforeBegin' , img);
-        setTimeout(()=>{},100);
-        img.style.right = 40;
 
        
     }, "HasRunAgain":false, "HasCreatedImage" : false}//put refs to metaData here. MetaData is a list of vargs used by invoked function. Function will be bound to dict 

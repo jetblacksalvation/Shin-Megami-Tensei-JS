@@ -9,7 +9,7 @@ class InputHandler{
         this.lastKey = '';
         this.directionPointer = 0;
         this.direction = [0, Math.PI/2, Math.PI ,(3*Math.PI)/2]
-        this.function_Dict = {"roam":roamInputHandler};
+        this.function_Dict = {"roam":roamInputHandler, 'fight-random':fightStateInputHandler};
         this.state;//pass state to inputhandler..
         window.addEventListener('keydown', (e) =>{
                 
@@ -82,7 +82,6 @@ function roamInputHandler(e){
     case 'e':
         if (this.directionPointer - 1 <0){
             this.directionPointer = 3;
-            break;
         }
         else{
             this.directionPointer -=1;
@@ -94,7 +93,6 @@ function roamInputHandler(e){
     case 'q':
         if (this.directionPointer + 1 >3){
             this.directionPointer = 0;
-            break;
         }
         else{
             this.directionPointer +=1;
@@ -115,4 +113,14 @@ function roamInputHandler(e){
     console.log("The rotation is ", Game_Globals_Instance.camera.rotation.y);
     this.lastKey = e.key;
 
+}
+function fightStateInputHandler(e){
+    //fightStateInputHandler here 
+
+    console.log("I AM IN FIGHT S")
+    switch(e.key){
+        case 'q':
+            Game_Globals_Instance.state = 'roam'
+            break;
+    }
 }
