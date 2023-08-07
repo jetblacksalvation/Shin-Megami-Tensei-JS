@@ -47,7 +47,7 @@ const LevelandStateDrawer = {
         // var health = 10;
         Game_Globals_Instance.root.render(
             <React.StrictMode>
-                <img src="/Images/astolfo.jpg" width={800} height={800 } style={{'user-select': 'none', 'right' : 20, 'zIndex':50, 'background-size':'cover'}}></img>
+                <img src="/Images/astolfo.jpg" width={800} height={800 }></img>
             </React.StrictMode>,
         )
         // document.body.insertAdjacentHTML('beforeBegin' , img);
